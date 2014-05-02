@@ -1,24 +1,27 @@
 require 'sinatra'
+require './room.rb'
 
-
-get '/' do
-	@message = 'Fire drill in the Loyola Schools on August 8, 2012'
-	@i =1 
+get '/home' do
 	erb :index
+end 
+
+get '/about' do 
+	erb :about
+end 
+
+get '/rooms' do
+	erb :rooms
 end
 
-get '/hello/:name' do
-	@name = params[:name]
-	@gender = params[:gender]
-	@age = params[:age]
-	erb :hello
+get '/res' do
+	erb :res
 end
 
-get '/search' do
-	erb :search_form
-end
+get '/reserve' do
 
-post '/results' do
-	@term= params[:term]
-	erb :results
+end 
+
+post '/room' do
+	@room = Room.new params[:name], params[:checkin], params[:checkout]
+	erb :reserve
 end

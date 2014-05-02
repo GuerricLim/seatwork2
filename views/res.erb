@@ -1,0 +1,25 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<title>Reserve A Room</title>
+<body>
+	<h1>Hotel 101</h1>
+	<h2>Reserve A Room:</h2>
+	<form method ="POST" action = "/room">
+		<label for ="room">Rooms:</label>
+		<select name = "name">
+			<option name="hotelCondo">Hotel Condo</option>
+			<option name="hotelSuite">Hotel Suite</option>
+			<option name="room101">Room 101</option>
+		</select>
+		<br />
+		<label for="date">Check-In Date:</label>
+		<input type="date" name = "checkin"/>
+		<label for="date">Check-Out Date:</label>
+		<input type="date" name = "checkout"/>
+		<br />
+		<input type="Submit" value="go"/>
+	</form>
+</body>
+</html>
